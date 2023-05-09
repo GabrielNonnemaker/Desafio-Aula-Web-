@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        button{
+            width: 90px;
+            background-color: rgb(253, 154, 154);
+            height: 60px;
+            margin:auto;
+            
+        }
+        button:hover{
+            background-color: rgb(243, 96, 60);
+        }
+        body{
+            margin: auto;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="contador"></h1>
+    <button onclick="mostraLampadaAcesa()">Incrementa</button>
+    <button onclick="mostraLampadaApagada()">Decrementa</button>
+    <button ondblclick="mostraLampadaQuebrada()">Reiniciar</button>
+     
+    <img id="lampada" src="css/acesa.png" />
+    <img id="lampada" src="css/apagada.png" />
+    <img id="lampada" src="css/quebrada.png" />
+    <style>
+        img {
+            display: none;
+        }
+    </style>
+</body>
+<script>
+    function mostraLampadaAcesa(){
+        document.getElementById("lampada").src = "css/acesa.png";
+        document.getElementById("lampada").style.display = "block"
+    }
+    function mostraLampadaApagada(){
+        document.getElementById("lampada").src = "css/apagada.png";
+        document.getElementById("lampada").style.display = "block"
+    }
+    function mostraLampadaQuebrada(){
+        document.getElementById("lampada").src = "css/quebrada.png";
+        document.getElementById("lampada").style.display = "block"
+    }
+    function mostraLampadas(){
+        mostraLampadaAcesa();
+        mostraLampadaApagada();
+        mostraLampadaQuebrada();
+
+
+
+    }
+    
+
+
+    var dado = 0;
+    function Incremento(){
+        dado++;
+        console.log(dado)
+        document.getElementById("contador").innerHTML = dado;
+    }
+    function Decremento(){
+        dado--;
+        console.log(dado)
+        document.getElementById("contador").innerHTML = dado;
+    }
+    function Reiniciar(){
+        dado = 0;
+        console.log(dado)
+        document.getElementById("contador").innerHTML = dado;
+    }
+</script>
+</html>
